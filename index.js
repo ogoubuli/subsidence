@@ -15,7 +15,7 @@
 		})
 
 		//assign map and image dimensions
-		var rc = new L.RasterCoords(map, img)
+		var rc = new L.rasterCoords(map, img)
 
 		// set the view on a marker ...
 		map.setView(rc.unproject([1589,1447]), 4)
@@ -140,4 +140,4 @@
 
 	}
 	init('map')
-}(window))
+} (window))

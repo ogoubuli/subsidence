@@ -5,23 +5,23 @@
  */
 /* globals define */
 
-;function(factory){
+;(function (factory) {
   var L
-  if (typeof define ==='function' && define.amd){
-    //amd
+  if (typeof define === 'function' && define.amd) {
+    // AMD
     define(['leaflet'], factory)
-  } else if (typeof module !==='undefined'){
-    //Node/CommonJS
+  } else if (typeof module !== 'undefined') {
+    // Node/CommonJS
     L = require('leaflet')
     module.exports = factory(L)
   } else {
-    //Browser globals
-    if (typeof window.L === 'undefined'){
+    // Browser globals
+    if (typeof window.L === 'undefined') {
       throw new Error('Leaflet must be loaded first')
     }
     factory(window.L)
   }
-} (function(L)){
+}(function (L) {
   /**
    * L.RasterCoords
    * @param {L.map} map - the map used
@@ -37,9 +37,9 @@
     if (this.width && this.height) {
       this.setMaxBounds()
     }
-}
+  }
 
-L.RasterCoords.prototype = {
+  L.RasterCoords.prototype = {
     /**
      * calculate accurate zoom level for the given image size
      */
@@ -78,4 +78,4 @@ L.RasterCoords.prototype = {
   }
 
   return L.RasterCoords
-})
+}))

@@ -1,65 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-
-    
-    <title>Mexico City </title>
-    <!-- Link to JQuery library (used for modal) -->  
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-
-  <!-- Link to Mapbox GL JS library --> 
-  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.js'></script>
-
-  <!-- Link to Mapbox GL JS css stylesheet -->  
-  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.css' rel='stylesheet' />
-
-  <!-- Link to our custom stylesheet -->  
-  <link rel="stylesheet" href="map.css">
+    <title>example for leaflet-rastercoords</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <style>
+      html, body, #map {
+        width:100%;
+        height:100%;
+        margin:0;
+        padding:0;
+        background-color: #B0B0B0
+      }
+    </style>
   </head>
-
-<body>
-    <h1>Territorial Map of Mexico City</h1>
-<!-- Map  --> 
-  <div id="map"></div>
-
-  <!-- Info window (shows info about parks when hovering over a park)  -->  
-  <div class='map-overlay' id='features'>
-    <h2>Soil condition of Mexico Basin</h2>
-    <div id='info-window-body'>
-      <p>Hover over a area or click on a shape to learn more about it.</p>
-    </div>
-  </div>
-
-  <!-- Map legend (content populated by our javascript) --> 
-  <div class='map-overlay' id='legend'></div>
-
-  <!-- "About this map" modal (hidden by default) --> 
-  <div class='modal'>
-    <h2 class='modal-title'>About this project</h2>
-    <div class='modal-body'><p>This is an example map of Charlottesville created in the Scripting Civic Engagement seminar at the University of Virginia (Fall 2017), taught by Andrea Hansen Phillips.</p><p>Map data courtesy of <a href='https://www.mapbox.com/studio/'>Mapbox Studio</a> and the <a href='http://www.charlottesville.org/online-services/maps-and-gis-data'>City of Charlottesville</a></p><p>For questions or to improve this map, contact <a href='mailto:ah2th@virginia.edu'>Andrea Hansen Phillips</a></p></div>
-    <button class='close-button'>&times;</button>   <!-- A special "x" character (the multiply sign) used in close buttons -->  
-  </div>
-  <div id='screen'></div>
-
-  <!-- Button to hide or show "About this map" modal -->  
-  <button type='button' class='button-default' id="about">About this map</button> <!-- Button to hide or show modal -->
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-
-    <!-- JavaScript for the Map -->
+  <body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
     <script src="rastercoords.js"></script>
     <script src="geojson.js"></script>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

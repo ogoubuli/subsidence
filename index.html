@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" 
-          href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" /> 
+  <title>Subsidence in Mexico City</title>
+ <!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+<!-- Leaflet Javascript library -->
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<!-- Leaflet Ajax library -->
+<script src="lib/leaflet-ajax/dist/leaflet.ajax.min.js" type="text/javascript"></script>  
+    <link rel="stylesheet" href="map.css" /> 
 </head>
 <body>
-    <div id="map" style="width: 700px; height: 500px"></div>
- 
-    <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
-
-    <script>
-        var map = L.map('map').setView([0, 0], 2);
-        L.tileLayer('tiles/{z}/{x}/{y}.jpg', {
-            minZoom: 1,
-            maxZoom: 6,
-            attribution: 'Soil Condition by Xingyu Yang',
-            tms: true
-        }).addTo(map);
-    </script>
+  <div class="header">
+  <h1 id="pagetitle">Subsidence in Mexico City</h1>
+</div>  
+<div id="map-container">
+  <div id="map"></div>
+</div>
 </body>
+
+<!-- Custom Javascript -->
+<script src="index.js"></script>
 </html>

@@ -31,6 +31,13 @@ map.on('click', function (event) {
 })
 
 // the tile layer containing the image generated with `gdal2tiles --leaflet -p raster -w none <img> tiles`
-L.tileLayer('./tiles/{z}/{x}/{y}.png', {
-  noWrap: true
-}).addTo(map)
+
+
+var map = L.map('map').setView([0, 0], 2);
+
+L.tileLayer('./tiles/{z}/{x}/{y}.jpg', {
+ minZoom: 1,
+  maxZoom: 6,
+  attribution: 'Soil Condition by Xingyu Yang',
+  tms: true
+}).addTo(map);

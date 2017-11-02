@@ -9,7 +9,7 @@ L.tileLayer('./tiles/{z}/{x}/{y}.png', {
   tms: true
 }).addTo(map);
 
-var map = L.map('map'{
+var map = L.map('map', {
   crs: L.CRS.Simple
 }).setView([0, 0], 2);
 

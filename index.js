@@ -51,4 +51,4 @@ var sol      = xy(175.2, 145.0);
   L.marker(   deneb).addTo(map).bindPopup(    'Deneb');
 
   var travel = L.polyline([sol, deneb]).addTo(map);
->>>>>>> 2c7a00ab3be992717e5b10a54b54b9f8fa36b594
+// >>>>>>> 2c7a00ab3be992717e5b10a54b54b9f8fa36b594

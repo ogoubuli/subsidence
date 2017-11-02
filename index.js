@@ -1,5 +1,3 @@
-// for use with browserify / webpack
-
 var map = L.map('map').setView([0, 0], 2);
 
 L.tileLayer('./tiles/{z}/{x}/{y}.png', {
@@ -9,3 +7,5 @@ L.tileLayer('./tiles/{z}/{x}/{y}.png', {
   tms: true
 }).addTo(map);
 
+var Aquifer = new L.GeoJSON.AJAX("aquifer.json")
+Aquifer.addTo(map);

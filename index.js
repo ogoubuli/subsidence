@@ -7,10 +7,10 @@ L.tileLayer('./tiles/{z}/{x}/{y}.png', {
   tms: true
 }).addTo(map);
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
 var Aquifer = new L.GeoJSON.AJAX("aquifer.json")
 Aquifer.addTo(map);
-=======
+// =======
 var map = L.map('map', {
   crs: L.CRS.Simple
 }).setView([0, 0], 2);

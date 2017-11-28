@@ -32,67 +32,6 @@ var mapStyle = {
     "sprite": "mapbox://sprites/mapbox/dark-v9",
     "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
     "layers": [
-        {
-            "id": "background",
-            "type": "background",
-            "paint": {"background-color": "#111"}
-        },
-        {
-            "id": "water",
-            "source": "mapbox",
-            "source-layer": "water",
-            "type": "fill",
-            "paint": {"fill-color": "#2c2c2c"}
-        },
-        {
-            "id": "boundaries",
-            "source": "mapbox",
-            "source-layer": "admin",
-            "type": "line",
-            "paint": {"line-color": "#797979", "line-dasharray": [2, 2, 6, 2]},
-            "filter": ["all", ["==", "maritime", 0]]
-        },
-        {
-            "id": "overlay",
-            "source": "overlay",
-            "type": "raster",
-            "paint": {"raster-opacity": 0.85}
-        },
-        {
-            "id": "cities",
-            "source": "mapbox",
-            "source-layer": "place_label",
-            "type": "symbol",
-            "layout": {
-                "text-field": "{name_en}",
-                "text-font": ["DIN Offc Pro Bold", "Arial Unicode MS Bold"],
-                "text-size": {"stops": [[4, 9], [6, 12]]}
-            },
-            "paint": {
-                "text-color": "#969696",
-                "text-halo-width": 2,
-                "text-halo-color": "rgba(0, 0, 0, 0.85)"
-            }
-        },
-        {
-            "id": "states",
-            "source": "mapbox",
-            "source-layer": "state_label",
-            "type": "symbol",
-            "layout": {
-                "text-transform": "uppercase",
-                "text-field": "{name_en}",
-                "text-font": ["DIN Offc Pro Bold", "Arial Unicode MS Bold"],
-                "text-letter-spacing": 0.15,
-                "text-max-width": 7,
-                "text-size": {"stops": [[4, 10], [6, 14]]}
-            },
-            "filter": [">=", "area", 80000],
-            "paint": {
-                "text-color": "#969696",
-                "text-halo-width": 2,
-                "text-halo-color": "rgba(0, 0, 0, 0.85)"
-            }
         }
     ]
 };
@@ -105,7 +44,7 @@ var map = new mapboxgl.Map({
   style: 'mapbox://styles/estheryang/cj70ubz3k03zu2ro6ub2y0n9z' 
 });
 
-
+//change opacity; my image need to be added
 var slider = document.getElementById('slider');
 var sliderValue = document.getElementById('slider-value');
 
@@ -139,3 +78,4 @@ $('#about').on('click', function() {
   $('.modal').fadeToggle();  // toggles visibility of background screen when clicked (shows if hidden, hides if visible)                          
   
 });
+

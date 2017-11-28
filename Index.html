@@ -1,22 +1,46 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <title>Subsidence in Mexico City</title>
-<link rel="stylesheet" href="lib/leaflet/leaflet.css" />
-<script src="lib/leaflet/leaflet.js"></script> 
-    <link rel="stylesheet" href="map.css" /> 
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css'
-           rel='stylesheet' type='text/css'/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet-src.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
+	<title>My Mapbox GL JS Map</title>
+
+	<!-- Link to JQuery library (used for modal) -->	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+	<!-- Link to Mapbox GL JS library -->	
+	<!-- Link to Mapbox GL JS css stylesheet -->	
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.css' rel='stylesheet' />
+
+	<!-- Link to our custom stylesheet -->	
+	<link rel="stylesheet" href="map.css">
 </head>
+
 <body>
- <!-- Map  -->	
+
+	<!-- Map  -->	
 	<div id="map"></div>
 
+	<!-- Info window (shows info about parks when hovering over a park)  -->	
+	<div class='map-overlay' id='features'>
+		<h2>Subsidence in Mexico City</h2>
+		<div id='info-window-body'>
+			<p>Slide the </p>
+		</div>
+	</div>
+
+	<!-- "About this map" modal (hidden by default) -->	
+	<div class='modal'>
+		<h2 class='modal-title'>Subsidence</h2>
+		<div class='modal-body'><p>Mexico City is built on top of an old lake. The whole city is sinking curently. </p><p>Map data courtesy of <a href='https://www.mapbox.com/studio/'>Mapbox Studio</a> and 
+            varies reasearch articles (need to be listed)</p><p>
+            Learn more about subsidence, please see (a link to USGS definition).</p></div>
+		<button class='close-button'>&times;</button>  	<!-- A special "x" character (the multiply sign) used in close buttons -->	
+	</div>
+	<div id='screen'></div>
+
+	<!-- Button to hide or show "About this map" modal -->	
+	<button type='button' class='button-default' id="about">Subsidence in Mexico City</button> <!-- Button to hide or show modal -->
 </body>
 
-<!-- Custom Javascript -->
+<!-- Link to our custom javascript -->	
 <script src="index.js"></script>
-<script src="rastercoords.js"></script>
-</html>
+ </html>
